@@ -1,0 +1,13 @@
+{
+  "path": "g:/Mon Drive/Gestion Sites/clients/sonia/design/propositions/b/index.html",
+  "bloquants": 0,
+  "majeurs": 0,
+  "mineurs": 1,
+  "findings": [
+    {
+      "id": "placeholders",
+      "level": "mineur",
+      "message": "6 placeholder(s) à remplacer : PLACEHOLDER: logo vectoriel à fournir par Sonia | PLACEHOLDER: la collection 2026 n'a pas de photos dédiées, Sonia doit fournir les photos des trois bûches (seule la bûche chocolat est une vraie photo de bûche) | PLACEHOLDER: photo de la bûche Mangue Coco & Citron vert (gâteau à la mangue en attendant) | PLACEHOLDER: photo de la bûche Vanille & Caramel beurre salé (gâteau vanille-fruits rouges en attendant) | PLACEHOLDER: logo vectoriel à fournir par Sonia (les trois feuilles du logo sont ici un SVG sobre) | PLACEHOLDER: mentions légales et politique de confidentialité à rédiger (SIRET, nom de famille, hébergeur à fournir par Sonia)"
+    }
+  ]
+}

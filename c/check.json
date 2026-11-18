@@ -1,0 +1,13 @@
+{
+  "path": "g:/Mon Drive/Gestion Sites/clients/sonia/design/propositions/c/index.html",
+  "bloquants": 0,
+  "majeurs": 0,
+  "mineurs": 1,
+  "findings": [
+    {
+      "id": "placeholders",
+      "level": "mineur",
+      "message": "7 placeholder(s) à remplacer : PLACEHOLDER: logo vectoriel à fournir par Sonia (favicon provisoire : trois feuilles sobres) | PLACEHOLDER: photo de pièces cocktail à fournir par Sonia | PLACEHOLDER: photo de la bûche Mangue Coco & Citron vert à fournir par Sonia (entremets mangue en attendant) | PLACEHOLDER: photo de la bûche Vanille & Caramel beurre salé à fournir par Sonia (gâteau fruits rouges en attendant) | PLACEHOLDER: portrait de Sonia, accord de publication à obtenir | PLACEHOLDER: accord de Sonia à obtenir pour publier ces 3 retours clients | PLACEHOLDER: pages Mentions légales et Politique de confidentialité à créer (SIRET, nom de famille, hébergeur à fournir)"
+    }
+  ]
+}

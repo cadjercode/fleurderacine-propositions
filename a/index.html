@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<script>/* Pose l'état « animé » avant le premier affichage (évite le flash du contenu qui apparaît puis se masque) ; si GSAP ne charge pas, tout redevient visible. */document.documentElement.classList.add('js');setTimeout(function(){if(!(window.gsap&&window.ScrollTrigger))document.documentElement.classList.remove('js');},3000);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pâtissière à Cormeilles-en-Parisis | Fleur de Racine</title>
+<meta name="description" content="Pâtisserie fine sur commande à Cormeilles-en-Parisis : tartes, entremets et bûches de Noël au souchet. Appelez Sonia, dès 72 h.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#EEEBE6">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Fleur de Racine">
+<meta property="og:title" content="Fleur de Racine, pâtissière à Cormeilles-en-Parisis">
+<meta property="og:description" content="Tartes, entremets et bûches de Noël au souchet, faits sur commande en petites séries. Retrait à Cormeilles-en-Parisis.">
+<meta property="og:image" content="img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fleur de Racine, pâtissière à Cormeilles-en-Parisis">
+<meta name="twitter:description" content="Tartes, entremets et bûches de Noël au souchet, faits sur commande en petites séries. Retrait à Cormeilles-en-Parisis.">
+
+<link rel="preload" href="fonts/Jqz55SSPQuCQF3t8uOwiUL-taUTtap9Gayo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/hero-1.webp" as="image" type="image/webp" fetchpriority="high">
+<style>@font-face{font-family:'Schibsted Grotesk';font-style:normal;font-weight:400 800;font-display:swap;src:url(fonts/Jqz55SSPQuCQF3t8uOwiUL-taUTtap9Gayo.woff2) format('woff2')}</style>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "Bakery"],
+  "name": "Fleur de Racine",
+  "description": "Pâtisserie fine sur commande à Cormeilles-en-Parisis : tartes, entremets et bûches de Noël au souchet.",
+  "telephone": "+33650819946",
+  "email": "fleurderacine@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cormeilles-en-Parisis",
+    "postalCode": "95240",
+    "addressCountry": "FR"
+  },
+  "areaServed": { "@type": "City", "name": "Cormeilles-en-Parisis" },
+  "sameAs": ["https://www.instagram.com/fleurderacine.patisserie/"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "La carte du moment",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Tartes" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Entremets" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Bûches de Noël 2026" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Flan vanille" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Pièces cocktail" } }
+    ]
+  }
+}
+</script>
+
+<style>
+:root{
+  --bg:#EEEBE6; --ink:#2B1A0F; --ink2:#4D2C14; --acc:#8A5214; --brand:#A5671B;
+  --surface:#FAF8F4; --dark:#2B1A0F; --gold:#CB9C1A; --line:rgba(138,82,20,.25); --line-strong:rgba(138,82,20,.55);
+  --hh:4.5rem; --gut:clamp(1rem,4vw,4rem); --max:90rem;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --font:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:1.0625rem;line-height:1.55;font-weight:400;overflow-x:hidden;padding-bottom:4.75rem}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--acc)}
+h1,h2,h3,p,ul,ol,figure,blockquote{margin:0}
+ul,ol{padding:0;list-style:none}
+:focus-visible{outline:.1875rem solid var(--acc);outline-offset:.25rem;border-radius:.25rem}
+.dark :focus-visible{outline-color:var(--gold)}
+.skip{position:absolute;left:1rem;top:-5rem;z-index:100;background:var(--ink);color:#fff;padding:.75rem 1.25rem;border-radius:999px;font-weight:700;text-decoration:none;transition:top .2s}
+.skip:focus{top:1rem}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gut)}
+.num-t{font-variant-numeric:tabular-nums}
+
+/* Boutons : un seul système, la pilule */
+.btn,.tel-pill,summary,.nav a{touch-action:manipulation}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:3rem;padding:.8rem 1.6rem;border-radius:999px;font:inherit;font-weight:700;font-size:1rem;line-height:1.2;text-decoration:none;text-align:center;border:.125rem solid transparent;cursor:pointer;transition:transform .25s var(--ease),background-color .2s,color .2s}
+@media (hover:hover){
+  .btn:hover{transform:translateY(-.125rem)}
+  .btn-main:hover{background:#6F4010}
+  .btn-ghost:hover{background:var(--acc);color:#fff}
+  .btn-gold:hover{background:#DDAE2A}
+  .nav a:hover{background-size:100% .125rem}
+  .tel-pill:hover{background:#6F4010}
+  .row:hover .thumb{transform:translateY(-.25rem)}
+}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn-main{background:var(--acc);color:#fff}
+.btn-ghost{background:transparent;color:var(--acc);border-color:var(--acc)}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.link-quiet{color:var(--ink2);font-weight:600;text-underline-offset:.25em}
+
+/* En-tête */
+.site-header{position:relative;z-index:5;height:var(--hh)}
+.site-header .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{display:block;line-height:0;text-decoration:none}
+.logo svg{height:2.3rem;width:auto}
+.nav{display:none}
+.nav ul{display:flex;gap:2rem}
+.nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.95rem;padding:.5rem 0;background:linear-gradient(var(--acc),var(--acc)) 0 100%/0 .125rem no-repeat;transition:background-size .35s var(--ease)}
+.tel-pill{display:inline-flex;align-items:center;min-height:2.75rem;padding:.5rem .85rem;border-radius:999px;background:var(--acc);color:#fff;font-weight:700;text-decoration:none;font-variant-numeric:tabular-nums;font-size:.875rem;white-space:nowrap}
+
+/* Hero : grille de filets */
+.hero{position:relative;display:grid;grid-template-rows:1fr auto;min-height:calc(100dvh - var(--hh))}
+.hero-lines{position:absolute;left:0;right:0;top:calc(var(--hh) * -1);bottom:0;pointer-events:none;z-index:0;
+  --cell:clamp(3.25rem,6.6vw,6rem);
+  background-image:linear-gradient(to right,var(--line) 1px,transparent 1px),linear-gradient(to bottom,var(--line) 1px,transparent 1px);
+  background-size:var(--cell) var(--cell);background-position:var(--gut) 0}
+.hero-main{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr);padding-block:1.5rem 2rem}
+.hero-copy{background:var(--bg);align-self:center;padding:1.25rem 0 1.5rem;position:relative;z-index:2}
+.h1{font-weight:700;letter-spacing:-.02em;line-height:1.02}
+.h1-a{display:block;font-size:clamp(2.35rem,10.4vw,3.6rem);color:var(--ink)}
+.h1-a .colon{color:var(--acc)}
+.h1-b{display:block;margin-top:.9rem;font-size:clamp(1.15rem,4.8vw,1.5rem);line-height:1.2;font-weight:500;letter-spacing:-.01em;color:var(--ink2)}
+.w{display:inline-block;overflow:hidden;vertical-align:bottom;padding:.14em 0 .16em;margin:-.14em 0 -.16em}
+.w>span{display:inline-block}
+.sub{margin-top:1.4rem;max-width:34rem;font-size:1.0625rem;color:var(--ink2)}
+.cta-row{display:flex;flex-direction:column;gap:.75rem;margin-top:1.6rem}
+.cta-row .link-quiet{align-self:flex-start;padding:.5rem 0;min-height:2.75rem;display:inline-flex;align-items:center}
+.collage{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-top:1.25rem;position:relative;z-index:1}
+.cell{overflow:hidden;background:var(--surface);position:relative}
+.cell img{width:100%;height:100%;object-fit:cover}
+.collage .cell{aspect-ratio:4/5}
+.bar{position:relative;z-index:1;border-top:1px solid var(--line-strong);background:var(--bg)}
+.bar ul{display:grid;grid-template-columns:1fr}
+.bar li{padding:.8rem 0;font-weight:600;font-size:.95rem;color:var(--ink2);border-bottom:1px solid var(--line)}
+.bar li:last-child{border-bottom:0}
+.bar b{color:var(--acc);font-variant-numeric:tabular-nums;margin-right:.5rem}
+
+
+/* Ouverture plein cadre : la grande cellule du hero devient la photo plein cadre au scroll normal (aucun épinglage) */
+.hero{overflow:clip}
+.opening{position:relative;height:clamp(24rem,86dvh,60rem);background:var(--bg);overflow:hidden;margin:0}
+.opening img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.opening .shade{position:absolute;inset:auto 0 0 0;height:55%;background:linear-gradient(to top,rgba(43,26,15,.78),rgba(43,26,15,0));pointer-events:none}
+.opening .cap{position:absolute;left:var(--gut);right:var(--gut);bottom:clamp(1.25rem,4vw,3rem);color:#FFFFFF;font-weight:700;font-size:clamp(1.6rem,5vw,4rem);line-height:1.02;letter-spacing:-.02em;max-width:18ch;margin:0}
+.opening .cap::before{content:"";display:block;width:3.5rem;height:.1875rem;background:var(--gold);margin-bottom:1rem}
+
+/* Sections */
+section{position:relative}
+.sec{padding-block:clamp(4rem,8vw,7rem)}
+.sec-head{margin-bottom:clamp(2rem,4vw,3.5rem)}
+.hr{height:1px;background:var(--line-strong);transform-origin:0 50%;margin-bottom:1.25rem}
+.h2{font-size:clamp(1.9rem,5.6vw,3.4rem);line-height:1.04;font-weight:700;letter-spacing:-.02em;color:var(--ink2);max-width:22ch}
+.h3{font-size:clamp(1.35rem,2.4vw,1.75rem);line-height:1.12;font-weight:700;letter-spacing:-.01em;color:var(--ink2)}
+.kicker{font-size:.8125rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:.75rem}
+.lead{max-width:42rem;font-size:1.0625rem;color:var(--ink2)}
+
+/* 72 h */
+.t72{background:var(--bg)}
+.t72-track{position:relative;margin-top:2rem;padding-left:2rem}
+.rule-h{display:none}
+.rule-v{position:absolute;left:0;top:0;width:.125rem;height:100%}
+.rule-v path,.rule-h path{fill:none;stroke:var(--brand);stroke-width:2;stroke-dasharray:1;stroke-dashoffset:0}
+.rule-bg-v{position:absolute;left:0;top:0;width:.125rem;height:100%;background:var(--line)}
+.steps{display:grid;gap:2.5rem}
+.step{position:relative;display:grid;gap:.5rem;align-content:start}
+.step::before{content:"";position:absolute;left:-2rem;top:.85rem;width:1.25rem;height:.125rem;background:var(--line-strong);transition:background-color .3s}
+.step.on::before{background:var(--brand)}
+.step .num{font-size:clamp(3.2rem,16vw,5.5rem);font-weight:800;line-height:.9;letter-spacing:-.04em;color:var(--brand);font-variant-numeric:tabular-nums}
+.step .num small{font-size:.38em;font-weight:700;letter-spacing:0;margin-left:.12em;color:var(--acc)}
+.step .lab{font-size:.8125rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2)}
+.step .cell{width:min(100%,15rem);aspect-ratio:4/5;margin-top:.5rem}
+.step .go{margin-top:1rem}
+.step .where{font-weight:700;color:var(--ink2);margin-top:.5rem;font-size:1.1rem}
+
+/* Bûches */
+.noel{background:var(--surface);border-block:1px solid var(--line)}
+.noel-grid{display:grid;gap:2rem}
+.count{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-block:1.5rem 1rem;border-block:1px solid var(--line-strong);padding-block:1rem}
+.count .big{font-size:clamp(5.5rem,26vw,11rem);font-weight:800;line-height:.85;letter-spacing:-.05em;color:var(--brand);font-variant-numeric:tabular-nums;min-width:1.2ch}
+.count .txt{font-weight:700;color:var(--ink2);font-size:1.15rem;max-width:12ch;line-height:1.2}
+.noel .cell{width:min(100%,24rem);aspect-ratio:4/5}
+.prices{display:flex;gap:2rem;flex-wrap:wrap;margin-top:1rem}
+.prices p{font-weight:600;color:var(--ink2)}
+.prices b{display:block;font-size:2.2rem;line-height:1;color:var(--brand);font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+
+/* Carte */
+.carte-list{border-top:1px solid var(--line-strong)}
+.row{display:grid;grid-template-columns:2.6rem 1fr;gap:.25rem 1rem;padding-block:1.6rem;border-bottom:1px solid var(--line-strong);align-items:start}
+.row .no{font-size:2rem;font-weight:800;line-height:1;letter-spacing:-.03em;color:var(--brand);font-variant-numeric:tabular-nums}
+.row .body{display:grid;gap:.6rem}
+.row .body p{max-width:38rem;color:var(--ink2)}
+.row .price{font-size:.95rem;font-weight:700;color:var(--ink2);display:flex;align-items:baseline;gap:.5rem;flex-wrap:wrap}
+.row .price b{font-size:2.1rem;line-height:1;color:var(--brand);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.row .price,.row .thumb{grid-column:2}
+.row .thumb{width:7.5rem;aspect-ratio:4/5;margin-top:.5rem;transition:transform .5s var(--ease)}
+.thumb-empty{display:none}
+
+/* Sonia */
+.sonia-grid{display:grid;gap:2rem}
+.frame{position:relative;max-width:22rem}
+.frame .cell{aspect-ratio:1/1;border:1px solid var(--line-strong)}
+.proofs{display:grid;gap:0;margin-top:1.5rem;border-top:1px solid var(--line-strong)}
+.proofs li{padding:1rem 0;border-bottom:1px solid var(--line);color:var(--ink2);display:grid;grid-template-columns:2rem 1fr;gap:.5rem}
+.proofs li::before{content:"";width:.7rem;height:.7rem;border-radius:50%;background:var(--brand);margin-top:.5rem}
+.souchet-cell{width:8.5rem;aspect-ratio:4/5;margin-top:1.5rem}
+
+/* Avis */
+.avis{background:var(--surface);border-block:1px solid var(--line)}
+.quotes{display:grid;border-top:1px solid var(--line-strong)}
+.quotes figure{padding-block:1.6rem;border-bottom:1px solid var(--line)}
+.quotes blockquote{font-size:1.2rem;line-height:1.35;font-weight:600;color:var(--ink)}
+.quotes figcaption{margin-top:.8rem;font-size:.95rem;color:var(--ink2)}
+
+/* Retrait */
+.statement{font-size:clamp(1.4rem,3.4vw,2.4rem);line-height:1.18;font-weight:600;letter-spacing:-.015em;color:var(--ink2);max-width:36ch}
+
+/* FAQ */
+.faq-list{border-top:1px solid var(--line-strong);max-width:52rem}
+.faq-list details{border-bottom:1px solid var(--line-strong)}
+.faq-list summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:1rem;align-items:flex-start;padding:1.15rem 0;font-weight:700;font-size:1.1rem;color:var(--ink2);min-height:3rem}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:"+";font-size:1.7rem;line-height:1;color:var(--acc);transition:transform .3s var(--ease);flex:none}
+.faq-list details[open] summary::after{transform:rotate(45deg)}
+.faq-list details p{padding:0 2.5rem 1.3rem 0;color:var(--ink2);max-width:42rem}
+
+/* Formulaire */
+.commande{background:var(--surface);border-top:1px solid var(--line)}
+form{display:grid;gap:1.1rem;max-width:44rem}
+.field{display:grid;gap:.4rem}
+label,.legend{font-weight:700;color:var(--ink2);font-size:.95rem}
+.hint{font-weight:400;font-size:.875rem;color:var(--ink2)}
+input[type=text],input[type=tel],input[type=date],textarea{width:100%;font:inherit;font-size:1rem;color:var(--ink);background:#fff;border:1px solid var(--acc);border-radius:.25rem;padding:.8rem .9rem;min-height:3rem}
+textarea{min-height:7rem;resize:vertical}
+input:focus-visible,textarea:focus-visible{outline:.1875rem solid var(--acc);outline-offset:.125rem}
+.check{display:flex;gap:.7rem;align-items:flex-start;font-weight:400;color:var(--ink);font-size:.95rem}
+.check input{width:1.4rem;height:1.4rem;flex:none;margin-top:.1rem;accent-color:var(--acc)}
+.rgpd{font-size:.875rem;color:var(--ink2)}
+.form-ok{display:none;padding:1rem 1.2rem;border:1px solid var(--acc);border-radius:.25rem;background:var(--bg);font-weight:600;color:var(--ink2)}
+.form-ok.show{display:block}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+/* Bande finale */
+.dark{background:var(--dark);color:var(--bg)}
+.final{padding-block:clamp(4rem,9vw,8rem)}
+.final .h2{color:var(--bg);max-width:16ch;font-size:clamp(2.2rem,7vw,4.6rem)}
+.final .hr{background:var(--gold)}
+.final p.t{margin-top:1.2rem;max-width:34rem;font-size:1.15rem}
+.final .btn{margin-top:1.8rem}
+footer.dark{border-top:1px solid rgba(203,156,26,.4);padding-block:2.5rem 2rem;font-size:.95rem}
+footer address{font-style:normal;line-height:1.7}
+footer a{color:var(--gold)}
+.foot-grid{display:grid;gap:1.5rem}
+.foot-grid strong{font-size:1.15rem;letter-spacing:.02em}
+.legal-line{margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(203,156,26,.3);font-size:.875rem;opacity:.95}
+
+/* Barre d'appel mobile */
+.callbar{position:fixed;z-index:50;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;gap:.5rem;padding:.6rem .75rem calc(.6rem + env(safe-area-inset-bottom));background:var(--bg);border-top:1px solid var(--line-strong)}
+.callbar .btn{min-height:3.1rem;padding-inline:.8rem}
+.callbar .btn-ghost{background:var(--bg)}
+
+/* Tablette et plus */
+@media (min-width:48rem){
+  body{padding-bottom:0;font-size:1.125rem}
+  .callbar{display:none}
+  .nav{display:block}
+  .logo svg{height:3.2rem}
+  .tel-pill{padding:.5rem 1.15rem;font-size:.95rem}
+  .t72-track{padding-left:0;margin-top:3rem}
+  .rule-v,.rule-bg-v{display:none}
+  .rule-h{display:block;position:absolute;left:0;top:0;width:100%;height:.125rem}
+  .rule-bg-h{position:absolute;left:0;top:0;width:100%;height:.125rem;background:var(--line)}
+  .steps{grid-template-columns:repeat(4,1fr);gap:0}
+  .step{padding:1.6rem 1.25rem 0 0}
+  .step::before{left:0;top:-.5rem;width:.125rem;height:1.1rem}
+  .step .num{font-size:clamp(3rem,6vw,5.5rem)}
+  .step .cell{width:100%;max-width:17rem}
+  .cta-row{flex-direction:row;flex-wrap:wrap;align-items:center;gap:.75rem 1rem}
+  .collage{grid-template-columns:repeat(4,1fr);gap:.5rem}
+  .collage .cell{aspect-ratio:4/5}
+  .bar ul{grid-template-columns:repeat(3,1fr)}
+  .bar li{border-bottom:0;border-right:1px solid var(--line-strong);padding:1.1rem 1.25rem}
+  .bar li:first-child{padding-left:0}
+  .bar li:last-child{border-right:0}
+  .noel-grid{grid-template-columns:1.3fr 1fr;gap:4rem;align-items:center}
+  .row{grid-template-columns:4.5rem minmax(0,1fr) 11rem 8.5rem;gap:1rem 2rem;align-items:center;padding-block:1.8rem}
+  .row .no{font-size:clamp(2.5rem,4vw,3.6rem)}
+  .row .thumb{grid-column:auto;width:100%;margin-top:0}
+  .row .price{grid-column:auto;flex-direction:column;align-items:flex-start;gap:.15rem}
+  .sonia-grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(2rem,6vw,6rem);align-items:start}
+  .quotes{grid-template-columns:repeat(3,1fr)}
+  .quotes figure{padding:1.8rem 1.8rem 1.8rem 0;border-bottom:0;border-right:1px solid var(--line);margin-right:1.8rem}
+  .quotes figure:last-child{border-right:0;margin-right:0}
+  form{grid-template-columns:1fr 1fr}
+  .field-wide,.check,.rgpd,.form-ok,form .btn,.hp{grid-column:1/-1}
+  form .btn{justify-self:start}
+  .foot-grid{grid-template-columns:2fr 1fr 1fr}
+}
+
+/* Hero grand écran : la grille s'ouvre sur 4 tartes */
+@media (min-width:64rem){
+  .hero-lines{--cell:clamp(4rem,6vw,6.5rem)}
+  .hero-main{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);align-items:stretch;padding-block:1.5rem}
+  .hero-copy{padding:1.5rem 4.5rem 1.5rem 0}
+  .h1-a{font-size:clamp(2.6rem,3.9vw,5rem)}
+  .h1-b{font-size:clamp(1.15rem,1.75vw,1.9rem);max-width:24ch}
+  .collage{--ch:max(min(calc(100dvh - var(--hh) - 7.5rem - 3rem),48vw),26rem);
+    display:grid;grid-template-columns:auto auto;grid-template-rows:repeat(3,calc((var(--ch) - 1rem)/3));gap:.5rem;justify-content:start;margin:0 0 0 -3.5rem;align-self:center;height:var(--ch);z-index:3}
+  .collage .cell{aspect-ratio:auto}
+  .collage .cell.big{grid-row:1/4;grid-column:1;width:calc(var(--ch) * .5625);height:var(--ch)}
+  .collage .cell.sm{grid-column:2;height:100%;width:calc((var(--ch) - 1rem) / 3 * .8)}
+  .collage .cell.sm:nth-child(2){margin-left:0}
+}
+@media (min-width:90rem){
+  .nav ul{gap:2.5rem}
+}
+
+/* Mouvement : états masqués posés uniquement par le JS (classe .js) et jamais en mouvement réduit */
+@media (prefers-reduced-motion:no-preference){
+  .js .hero-lines{clip-path:inset(0 100% 0 0)}
+  .js .h1 .w>span{transform:translateY(112%)}
+  .js .hero-rv{opacity:0;transform:translateY(.8rem)}
+  .js .hero .cell{clip-path:inset(100% 0 0 0)}
+  .js .rv{opacity:0;clip-path:inset(100% 0 0 0);transform:translateY(1.1rem)}
+  .js .opening .frame-img{clip-path:inset(10% 36% 10% 36%)}
+  .js .opening .cap{opacity:0;transform:translateY(1rem)}
+  .js .rv-cell{clip-path:inset(100% 0 0 0)}
+  .js .hr{transform:scaleX(0)}
+  .js .step .cell{clip-path:inset(100% 0 0 0)}
+  .js .step .step-in{opacity:0;transform:translateY(.8rem)}
+  .js .rule-h path,.js .rule-v path{stroke-dashoffset:1}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Fleur de Racine, retour en haut de page">
+      <!-- PLACEHOLDER: logo vectoriel à fournir par Sonia (trois feuilles + FLEUR DE RACINE en serif fine espacée) -->
+      <svg viewBox="0 0 250 64" role="img" aria-label="Fleur de Racine" xmlns="http://www.w3.org/2000/svg" width="250" height="64">
+        <g transform="translate(32 40)" fill="#A5671B">
+          <path d="M0 0C-7-8-7-22 0-32 7-22 7-8 0 0Z"/>
+          <path d="M0 0C-7-8-7-22 0-32 7-22 7-8 0 0Z" transform="rotate(-42)" fill="#CB9C1A"/>
+          <path d="M0 0C-7-8-7-22 0-32 7-22 7-8 0 0Z" transform="rotate(42)" fill="#CB9C1A"/>
+        </g>
+        <text x="62" y="30" font-family="'Cormorant Garamond',Georgia,'Times New Roman',serif" font-size="19" letter-spacing="5" fill="#4D2C14">FLEUR</text>
+        <text x="62" y="52" font-family="'Cormorant Garamond',Georgia,'Times New Roman',serif" font-size="19" letter-spacing="5" fill="#4D2C14">DE RACINE</text>
+      </svg>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="#carte">La carte</a></li>
+        <li><a href="#delai">Sur commande</a></li>
+        <li><a href="#sonia">Je suis Sonia</a></li>
+        <li><a href="#faq">Questions</a></li>
+      </ul>
+    </nav>
+    <a class="tel-pill" href="tel:0650819946" aria-label="Appeler Sonia au 06 50 81 99 46">06 50 81 99 46</a>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="titre">
+    <div class="hero-lines" aria-hidden="true"></div>
+    <div class="wrap hero-main">
+      <div class="hero-copy">
+        <h1 class="h1" id="titre"><span class="h1-a"><span class="w"><span>Pâtissière</span></span> <span class="w"><span>à</span></span> <span class="w"><span>Cormeilles-en-Parisis<span class="colon">&nbsp;:</span></span></span></span> <span class="h1-b"><span class="w"><span>des</span></span> <span class="w"><span>pâtisseries</span></span> <span class="w"><span>fines</span></span> <span class="w"><span>au</span></span> <span class="w"><span>souchet,</span></span> <span class="w"><span>sur</span></span> <span class="w"><span>commande</span></span></span></h1>
+        <p class="sub hero-rv">Je suis Sonia. Je fabrique en petites séries des tartes, des entremets et des bûches moins sucrés, pour que le goût passe avant tout. Là où naît le goût.</p>
+        <div class="cta-row hero-rv">
+          <a class="btn btn-main" href="tel:0650819946">Appeler Sonia au 06 50 81 99 46</a>
+          <a class="btn btn-ghost" href="https://wa.me/33650819946" target="_blank" rel="noopener noreferrer">Écrire sur WhatsApp / SMS</a>
+          <a class="link-quiet" href="#carte">Voir la carte du moment</a>
+        </div>
+      </div>
+      <div class="collage" aria-label="Quatre pâtisseries de Sonia vues du dessus">
+        <figure class="cell big"><img src="img/hero-1.webp" width="900" height="1600" fetchpriority="high" alt="Tarte à la rosace de crème pistache et de chocolat au lait, couronne d'amandes grillées, posée sur un plateau en bois"></figure>
+        <figure class="cell sm"><img src="img/hero-2.webp" width="540" height="675" loading="lazy" decoding="async" alt="Tarte citron et fruit de la passion, crème fouettée en vagues, avec un demi-citron vert"></figure>
+        <figure class="cell sm"><img src="img/hero-3.webp" width="540" height="675" loading="lazy" decoding="async" alt="Tarte au chocolat noisette, crème ondulée parsemée de noisettes, sur une assiette blanche"></figure>
+        <figure class="cell sm"><img src="img/hero-4.webp" width="540" height="675" loading="lazy" decoding="async" alt="Entremets mangue passion, pétales de mangue disposés en rosace sur un biscuit à la crème"></figure>
+      </div>
+    </div>
+    <div class="bar hero-rv">
+      <div class="wrap">
+        <ul>
+          <li><b>01</b>Formée chez Ferrandi Paris</li>
+          <li><b>02</b>Sur commande, délai minimum 72 h</li>
+          <li><b>03</b>Petites séries, retrait à Cormeilles-en-Parisis</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <figure class="opening" aria-hidden="true">
+    <div class="frame-img" style="position:absolute;inset:0"><img src="img/hero-full.webp" width="1215" height="1000" loading="lazy" decoding="async" alt=""></div>
+    <div class="shade"></div>
+    <p class="cap">Là où naît le goût.</p>
+  </figure>
+
+  <section class="sec t72" id="delai" aria-labelledby="t-delai">
+    <div class="wrap">
+      <div class="hr" aria-hidden="true"></div>
+      <h2 class="h2 rv" id="t-delai">Sur commande, délai minimum 72 h</h2>
+      <div class="t72-track" id="track">
+        <div class="rule-bg-v" aria-hidden="true"></div>
+        <svg class="rule-v" viewBox="0 0 2 1000" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M1 0V1000"/></svg>
+        <div class="rule-bg-h" aria-hidden="true"></div>
+        <svg class="rule-h" viewBox="0 0 1000 2" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M0 1H1000"/></svg>
+        <ol class="steps">
+          <li class="step">
+            <p class="num"><span class="n" data-to="0">0</span><small>h</small></p>
+            <p class="lab step-in">Commandée</p>
+            <figure class="cell"><img src="img/step-commandee.webp" width="540" height="675" loading="lazy" decoding="async" alt="Tarte meringuée en rosace, citron et petites touches de caramel"></figure>
+          </li>
+          <li class="step">
+            <p class="num"><span class="n" data-to="24">24</span><small>h</small></p>
+            <p class="lab step-in">Préparée</p>
+            <figure class="cell"><img src="img/step-preparee.webp" width="640" height="800" loading="lazy" decoding="async" alt="Tarte vue du dessus, rayures de crème saupoudrées de cacao"></figure>
+          </li>
+          <li class="step">
+            <p class="num"><span class="n" data-to="48">48</span><small>h</small></p>
+            <p class="lab step-in">Emballée</p>
+            <figure class="cell"><img src="img/step-emballee.webp" width="640" height="800" loading="lazy" decoding="async" alt="Tarte chocolat et orange en tranche, crème fouettée et éclats de coco grillés"></figure>
+          </li>
+          <li class="step">
+            <p class="num"><span class="n" data-to="72">72</span><small>h</small></p>
+            <p class="lab step-in">Retrait</p>
+            <figure class="cell"><img src="img/step-retrait.webp" width="540" height="675" loading="lazy" decoding="async" alt="Flan vanille doré tenu à la main sur un carton noir"></figure>
+            <p class="where step-in">Retrait à Cormeilles-en-Parisis</p>
+            <a class="btn btn-main go step-in" href="tel:0650819946">Appeler Sonia au 06 50 81 99 46</a>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec noel" id="noel" aria-labelledby="t-noel">
+    <div class="wrap noel-grid">
+      <div>
+        <div class="hr" aria-hidden="true"></div>
+        <h2 class="h2 rv" id="t-noel">Bûches de Noël 2026</h2>
+        <div class="count rv">
+          <span class="big" id="days">—</span>
+          <p class="txt">jours restants avant le 12 décembre</p>
+        </div>
+        <p class="lead rv">Commandes ouvertes jusqu'au 12 décembre 2026.</p>
+        <div class="prices rv">
+          <p><b>39 €</b>4/6 parts</p>
+          <p><b>69 €</b>8/10 parts</p>
+        </div>
+      </div>
+      <figure class="cell rv-cell">
+        <img src="img/buche.webp" width="640" height="800" loading="lazy" decoding="async" alt="Bûche de Noël au chocolat, glaçage velours brun et lames de chocolat, sur un socle doré">
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec" id="carte" aria-labelledby="t-carte">
+    <div class="wrap">
+      <div class="hr" aria-hidden="true"></div>
+      <h2 class="h2 sec-head rv" id="t-carte">La carte du moment</h2>
+      <ol class="carte-list">
+        <li class="row rv">
+          <span class="no" aria-hidden="true">01</span>
+          <div class="body">
+            <h3 class="h3">Tartes</h3>
+            <p>Citron souchet moringa, chocolat noir souchet, coco chocolat, mangue passion souchet : la carte change avec la saison. Chaque tarte est préparée à la commande.</p>
+            <p>Un dessert signature qui sort de l'ordinaire pour un repas de famille ou un anniversaire.</p>
+          </div>
+          <p class="price"><span>À partir de</span><b>38 €</b></p>
+          <figure class="cell thumb"><img src="img/carte-tartes.webp" width="360" height="450" loading="lazy" decoding="async" alt="Tarte à la crème pistache en rayures sur un plateau doré"></figure>
+        </li>
+        <li class="row rv">
+          <span class="no" aria-hidden="true">02</span>
+          <div class="body">
+            <h3 class="h3">Entremets</h3>
+            <p>Chocolat noisette souchet, intense et praliné, ou mangue citron, frais et acidulé. Des textures superposées, moins sucrées pour laisser parler les saveurs.</p>
+            <p>Un gâteau de fête fait pour vos invités, pas un gâteau de vitrine.</p>
+          </div>
+          <p class="price"><span>À partir de</span><b>58 €</b></p>
+          <figure class="cell thumb"><img src="img/carte-entremets.webp" width="360" height="450" loading="lazy" decoding="async" alt="Entremets blanc surmonté de choux à la crème et de perles de caramel"></figure>
+        </li>
+        <li class="row rv">
+          <span class="no" aria-hidden="true">03</span>
+          <div class="body">
+            <h3 class="h3">Bûches de Noël 2026</h3>
+            <p>Trois bûches, « Noël en trois émotions » : Deux Chocolats &amp; Souchet (sans gluten), Mangue Coco &amp; Citron vert, Vanille &amp; Caramel beurre salé. Commandes ouvertes jusqu'au 12 décembre 2026.</p>
+            <p>Un dessert de Noël original, en 4/6 parts (39 €) ou 8/10 parts (69 €).</p>
+          </div>
+          <p class="price"><span>39 € · 69 €</span><b><a href="#noel" class="link-quiet">Voir</a></b></p>
+          <figure class="cell thumb"><img src="img/buche.webp" width="640" height="800" loading="lazy" decoding="async" alt="Bûche de Noël au chocolat, glaçage velours brun"></figure>
+        </li>
+        <li class="row rv">
+          <span class="no" aria-hidden="true">04</span>
+          <div class="body">
+            <h3 class="h3">Flan vanille</h3>
+            <p>Un flan crémeux, fondant et vanillé, préparé sur commande. La recette garde l'esprit de la maison : peu sucré, de bons ingrédients.</p>
+            <p>Le dessert simple et gourmand pour le dimanche.</p>
+          </div>
+          <p class="price"><span>À partir de</span><b>28 €</b></p>
+          <figure class="cell thumb"><img src="img/step-retrait.webp" width="540" height="675" loading="lazy" decoding="async" alt="Flan vanille doré tenu à la main"></figure>
+        </li>
+        <li class="row rv">
+          <span class="no" aria-hidden="true">05</span>
+          <div class="body">
+            <h3 class="h3">Pièces cocktail</h3>
+            <p>Sonia prépare aussi des pièces cocktail pour vos réceptions. Le choix et les quantités se décident ensemble, par téléphone.</p>
+            <p>Une réception qui ne ressemble pas à toutes les autres : appelez pour décrire votre événement.</p>
+          </div>
+          <p class="price"><span>Par téléphone</span><b><a href="tel:0650819946" class="link-quiet">06 50 81 99 46</a></b></p>
+          <!-- PLACEHOLDER: photo des pièces cocktail à fournir par Sonia -->
+          <div class="thumb-empty" aria-hidden="true"></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" id="sonia" aria-labelledby="t-sonia" style="padding-top:0">
+    <div class="wrap sonia-grid">
+      <div class="frame rv-cell">
+        <figure class="cell"><img src="img/sonia.webp" width="720" height="720" loading="lazy" decoding="async" alt="Portrait de Sonia, pâtissière, en veste de cuisine blanche et foulard rose, un fouet à la main"></figure>
+      </div>
+      <div>
+        <div class="hr" aria-hidden="true"></div>
+        <h2 class="h2 rv" id="t-sonia">Je suis Sonia</h2>
+        <ul class="proofs">
+          <li class="rv"><span>Formée en pâtisserie chez Ferrandi Paris et auprès de grands chefs, après des débuts en autodidacte</span></li>
+          <li class="rv"><span>Le souchet, tubercule qu'elle connaît depuis son enfance au Togo, travaillé en praliné maison, en pâte et en farine</span></li>
+          <li class="rv"><span>Fabrication artisanale en petites séries, pâtisseries moins sucrées</span></li>
+          <li class="rv"><span>Tout est réalisé sur commande, délai minimum 72 h, retrait à Cormeilles-en-Parisis</span></li>
+        </ul>
+        <!-- PLACEHOLDER: photo d'origine haute qualité du souchet, à fournir par Sonia -->
+        <figure class="cell souchet-cell rv-cell"><img src="img/souchet.webp" width="480" height="600" loading="lazy" decoding="async" alt="Souchet, petits tubercules ridés, dans un verre à cocktail sur du marbre"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec avis" aria-labelledby="t-avis">
+    <div class="wrap">
+      <div class="hr" aria-hidden="true"></div>
+      <h2 class="h2 sec-head rv" id="t-avis">Retours de clients</h2>
+      <!-- PLACEHOLDER: accord de Sonia à obtenir pour publier ces trois retours -->
+      <div class="quotes">
+        <figure class="rv"><blockquote>« excellent, remarquable, un vrai dessert signature. Elle est extraordinaire cette tarte !!! »</blockquote><figcaption>Un client (tarte mangue passion souchet)</figcaption></figure>
+        <figure class="rv"><blockquote>« c'était encore une fois délicieux ! […] je pense que c'est ma préférée »</blockquote><figcaption>Une cliente (tarte citron moringa)</figcaption></figure>
+        <figure class="rv"><blockquote>« On a adoré les saveurs, les textures. Franchement un grand bravo […] un très bon dessert. »</blockquote><figcaption>Un client (entremets chocolat souchet noisette)</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="t-retrait">
+    <div class="wrap">
+      <div class="hr" aria-hidden="true"></div>
+      <h2 class="kicker rv" id="t-retrait">Retrait et livraison</h2>
+      <p class="statement rv">Vos commandes se retirent à Cormeilles-en-Parisis. La livraison est possible sur demande : appelez Sonia pour savoir si elle peut venir jusqu'à vous.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="faq" aria-labelledby="t-faq" style="padding-top:0">
+    <div class="wrap">
+      <div class="hr" aria-hidden="true"></div>
+      <h2 class="h2 sec-head rv" id="t-faq">Questions fréquentes</h2>
+      <div class="faq-list rv">
+        <details><summary>Combien de temps à l'avance faut-il commander ?</summary><p>Toutes les pâtisseries sont faites sur commande, avec un délai minimum de 72 h. Pour un projet plus élaboré, prévoyez davantage et appelez-moi : on en parle.</p></details>
+        <details><summary>Comment passer commande ?</summary><p>Par téléphone, SMS ou WhatsApp au 06 50 81 99 46, ou par message privé sur Instagram. Vous pouvez aussi remplir le formulaire ci-dessous : je vous rappelle.</p></details>
+        <details><summary>Où récupérer ma commande, livrez-vous ?</summary><p>Le retrait se fait à Cormeilles-en-Parisis. La livraison est possible sur demande : contactez-moi avec votre adresse et la date souhaitée.</p></details>
+        <details><summary>Jusqu'à quand commander une bûche de Noël ?</summary><p>Les commandes sont ouvertes jusqu'au 12 décembre 2026. Il y a trois saveurs, en 4/6 parts ou en 8/10 parts.</p></details>
+        <details><summary>Avez-vous une option sans gluten ?</summary><p>Oui pour Noël : la bûche Deux Chocolats &amp; Souchet est sans gluten. Pour toute autre pâtisserie ou question d'allergie, contactez-moi avant de commander.</p></details>
+        <details><summary>Le souchet, c'est quoi ?</summary><p>Un tubercule, pas un fruit sec : il pousse sous terre. Son goût fait penser à l'amande et un peu à la noisette. Je le connais depuis mon enfance au Togo.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec commande" id="commande" aria-labelledby="t-form">
+    <div class="wrap">
+      <div class="hr" aria-hidden="true"></div>
+      <h2 class="h2 sec-head rv" id="t-form">Me contacter</h2>
+      <form id="form-commande" action="#commande" method="get" novalidate>
+        <div class="field">
+          <label for="prenom">Prénom *</label>
+          <input type="text" id="prenom" name="prenom" autocomplete="given-name" required>
+        </div>
+        <div class="field">
+          <label for="tel">Téléphone *</label>
+          <input type="tel" id="tel" name="telephone" autocomplete="tel" inputmode="tel" required>
+        </div>
+        <div class="field field-wide">
+          <label for="souhait">Ce que vous souhaitez (tarte, entremets, bûche, flan, pièces cocktail…) *</label>
+          <input type="text" id="souhait" name="souhait" required>
+        </div>
+        <div class="field field-wide">
+          <label for="date">Date souhaitée <span class="hint">(délai minimum 72 h)</span></label>
+          <input type="date" id="date" name="date">
+        </div>
+        <div class="field field-wide">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+        <div class="hp" aria-hidden="true"><label for="site">Ne pas remplir</label><input type="text" id="site" name="site" tabindex="-1" autocomplete="off"></div>
+        <label class="check" for="consent"><input type="checkbox" id="consent" name="consentement" required><span>J'accepte d'être recontacté(e) pour cette commande.</span></label>
+        <p class="rgpd">Vos informations servent uniquement à répondre à votre demande ; consultez la <a href="#mentions">politique de confidentialité</a>.</p>
+        <p class="hint">* Champs obligatoires</p>
+        <button type="submit" class="btn btn-main">Me contacter</button>
+        <p class="form-ok" id="form-ok" role="status">Merci, votre demande est bien notée. Sonia vous rappelle.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="dark final" aria-labelledby="t-final">
+    <div class="wrap">
+      <div class="hr" aria-hidden="true"></div>
+      <h2 class="h2 rv" id="t-final">Une envie de pâtisserie ?</h2>
+      <p class="t rv">Tartes, entremets, flans et petites douceurs, sur commande. Dites-moi pour quand, je m'occupe du reste.</p>
+      <a class="btn btn-gold rv" href="tel:0650819946">Appeler Sonia au 06 50 81 99 46</a>
+    </div>
+  </section>
+</main>
+
+<footer class="dark">
+  <div class="wrap">
+    <div class="foot-grid">
+      <address>
+        <strong>Fleur de Racine</strong><br>
+        Cormeilles-en-Parisis (95240)<br>
+        <a href="tel:0650819946">06 50 81 99 46</a><br>
+        <a href="mailto:fleurderacine@gmail.com">fleurderacine@gmail.com</a>
+      </address>
+      <p>Retrait à Cormeilles-en-Parisis, livraison sur demande.<br>Horaires : non communiqués (sur commande).</p>
+      <p><a href="https://www.instagram.com/fleurderacine.patisserie/" target="_blank" rel="noopener noreferrer">Instagram @fleurderacine.patisserie</a></p>
+    </div>
+    <!-- PLACEHOLDER: mentions légales et politique de confidentialité à rédiger (SIRET, nom de famille, hébergeur fournis par Sonia) -->
+    <p class="legal-line" id="mentions">Mentions légales · Politique de confidentialité : pages à compléter. © 2026 Fleur de Racine</p>
+  </div>
+</footer>
+
+<div class="callbar" role="group" aria-label="Contacter Sonia">
+  <a class="btn btn-main" href="tel:0650819946">Appeler</a>
+  <a class="btn btn-ghost" href="https://wa.me/33650819946" target="_blank" rel="noopener noreferrer">WhatsApp / SMS</a>
+</div>
+
+<script defer src="vendor/gsap.min.js"></script>
+<script defer src="vendor/ScrollTrigger.min.js"></script>
+<script defer src="script.js"></script>
+</body>
+</html>

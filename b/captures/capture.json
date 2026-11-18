@@ -1,0 +1,30 @@
+{
+  "path": "g:\\Mon Drive\\Gestion Sites\\clients\\sonia\\design\\propositions\\b\\index.html",
+  "captures": [
+    "g:\\Mon Drive\\Gestion Sites\\clients\\sonia\\design\\propositions\\b\\captures\\375.png",
+    "g:\\Mon Drive\\Gestion Sites\\clients\\sonia\\design\\propositions\\b\\captures\\768.png",
+    "g:\\Mon Drive\\Gestion Sites\\clients\\sonia\\design\\propositions\\b\\captures\\1440.png",
+    "g:\\Mon Drive\\Gestion Sites\\clients\\sonia\\design\\propositions\\b\\captures\\1440-hero.png",
+    "g:\\Mon Drive\\Gestion Sites\\clients\\sonia\\design\\propositions\\b\\captures\\1440-transfo.png",
+    "g:\\Mon Drive\\Gestion Sites\\clients\\sonia\\design\\propositions\\b\\captures\\1440-scroll-25.png",
+    "g:\\Mon Drive\\Gestion Sites\\clients\\sonia\\design\\propositions\\b\\captures\\1440-scroll-50.png",
+    "g:\\Mon Drive\\Gestion Sites\\clients\\sonia\\design\\propositions\\b\\captures\\1440-scroll-75.png",
+    "g:\\Mon Drive\\Gestion Sites\\clients\\sonia\\design\\propositions\\b\\captures\\375-hero.png"
+  ],
+  "mouvement": [
+    {
+      "largeur": 1440,
+      "animations": 27,
+      "scrollTriggers": 7
+    },
+    {
+      "largeur": 375,
+      "animations": 25,
+      "scrollTriggers": 7
+    }
+  ],
+  "bloquants": 0,
+  "majeurs": 0,
+  "mineurs": 0,
+  "findings": []
+}

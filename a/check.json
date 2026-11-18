@@ -1,0 +1,13 @@
+{
+  "path": "g:/Mon Drive/Gestion Sites/clients/sonia/design/propositions/a/index.html",
+  "bloquants": 0,
+  "majeurs": 0,
+  "mineurs": 1,
+  "findings": [
+    {
+      "id": "placeholders",
+      "level": "mineur",
+      "message": "5 placeholder(s) à remplacer : PLACEHOLDER: logo vectoriel à fournir par Sonia (trois feuilles + FLEUR DE RACINE en serif fine espacée) | PLACEHOLDER: photo des pièces cocktail à fournir par Sonia | PLACEHOLDER: photo d'origine haute qualité du souchet, à fournir par Sonia | PLACEHOLDER: accord de Sonia à obtenir pour publier ces trois retours | PLACEHOLDER: mentions légales et politique de confidentialité à rédiger (SIRET, nom de famille, hébergeur fournis par Sonia)"
+    }
+  ]
+}
